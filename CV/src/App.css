@@ -1,0 +1,173 @@
+#root {
+  max-width: 1280px;
+  /* margin: 0 auto; */
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  margin-right: auto;
+  min-width: 80%;
+  justify-content: space-between;
+  min-height: 100vh;
+  gap: 5rem;
+}
+html {
+  --header-color: #363636;
+  --secondary-color: #646464;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+/* cv */
+.cv {
+  border: 2px solid black;
+  padding: 5rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-self: flex-start;
+  gap: 40px;
+}
+.cv section:not(:last-child) {
+  margin-bottom: 2rem;
+}
+section > .title,
+.general-info h2 {
+  color: var(--header-color);
+  font-size: 4rem;
+  text-transform: capitalize;
+}
+section > .title {
+  /* text-align: left; */
+}
+/* start general info */
+.general-info h2 {
+}
+.general-info p {
+  color: var(--secondary-color);
+}
+.general-info img {
+}
+.general-info .contacts {
+  margin: auto;
+  text-align: left;
+  width: fit-content;
+}
+
+/* education */
+.education {
+}
+.education h3 {
+}
+.education .info {
+  width: fit-content;
+  margin: auto;
+}
+.education .info p {
+}
+
+/* experience */
+
+.experiences {
+}
+.experiences h3.title {
+}
+.experiences .experience-card {
+  position: relative;
+  padding: 2rem;
+  text-align: left;
+  /* margin-bottom: 20px; */
+}
+.experiences .experience-card:not(:last-of-type):after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 2px;
+  bottom: 0;
+  left: 10%;
+  background-color: var(--secondary-color);
+}
+.experiences .experience-card h4 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 1rem;
+  color: var(--header-color);
+}
+.experiences .experience-card h5 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--header-color);
+}
+.experiences .experience-card p {
+  color: var(--secondary-color);
+}
+
+/* form */
+form {
+  align-self: flex-start;
+  background-color: rgb(255, 123, 103);
+  /* min-height: 100vh; */
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 5px;
+  align-items: flex-start;
+  padding: 10rem 0;
+}
+form > * {
+}
+form label {
+  font-size: 1.4rem;
+  color: white;
+}
+form input {
+  margin-right: 1rem;
+}
+
+.edit {
+  position: absolute;
+  font-size: 2em;
+  display: none;
+  background-color: #eee;
+  padding: 5px;
+  border-radius: 50%;
+}
+*:has(> .edit) {
+  position: relative;
+}
+*:has(> .edit):hover .edit,
+*:has(> .edit):hover .delete {
+  display: block;
+}
+.general-info .edit {
+  right: 5%;
+  bottom: 20%;
+}
+.education .edit {
+  top: 17%;
+  right: -40px;
+}
+.experience-card .edit {
+  font-size: 1.4em;
+  top: 0;
+  right: 0;
+}
+.experience-card .delete {
+  font-size: 1.4em;
+  top: 50px;
+  right: 0;
+  position: absolute;
+  background-color: #eee;
+  padding: 5px;
+  border-radius: 50%;
+  display: none;
+}
+.add {
+  background: #8787ff;
+  width: 100%;
+  display: block;
+  font-size: 1.3em;
+  margin-top: 20px;
+}
